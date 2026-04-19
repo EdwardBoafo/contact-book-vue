@@ -1,11 +1,17 @@
-<script setup></script>
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
-</template>
+  <div>
+    <nav style="padding: 20px;">
+      <RouterLink to="/">Home</RouterLink>
+      |
+      <RouterLink to="/new">Add Contact</RouterLink>
+    </nav>
 
-<style scoped></style>
+    <main style="padding: 20px;">
+      <RouterView />
+    </main>
+  </div>
+</template>
